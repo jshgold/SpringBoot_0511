@@ -3,6 +3,9 @@ spring:
     name: boot_0511
   profiles:
     active: dev
+  datasource:
+    hikari:
+      auto-commit: false
   output:
     ansi:
       enabled: always

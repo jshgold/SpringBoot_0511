@@ -3,6 +3,8 @@ package csh.boot_0511;
 import csh.boot_0511.domain.member.member.entity.Member;
 import csh.boot_0511.domain.member.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -26,7 +28,7 @@ public class AppConfig {
     }
 
     @Bean
-    ApplicationRunner baseInitDataApplicationRunner() {
+    ApplicationRunner makeSampleMemberDataApplicationRunner() {
         return args -> {
             self.work1();
             self.work2();
